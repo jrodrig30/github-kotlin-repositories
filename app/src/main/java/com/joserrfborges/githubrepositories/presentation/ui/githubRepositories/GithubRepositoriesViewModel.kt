@@ -9,9 +9,8 @@ import com.joserrfborges.githubrepositories.domain.usecases.GithubRepositoriesUs
 import kotlinx.coroutines.flow.Flow
 
 class GithubRepositoriesViewModel(
-    private val githubRepositoriesUseCase: GithubRepositoriesUseCase
+    githubRepositoriesUseCase: GithubRepositoriesUseCase
 ) : ViewModel() {
     val githubRepositories: Flow<PagingData<Repository>> =
         githubRepositoriesUseCase.execute().cachedIn(viewModelScope)
-
 }
