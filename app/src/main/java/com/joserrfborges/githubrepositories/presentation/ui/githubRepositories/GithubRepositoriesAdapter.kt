@@ -23,10 +23,6 @@ class GithubRepositoriesAdapter :
         )
     }
 
-    override fun getItemCount(): Int {
-        return super.getItemCount()
-        val teste = "oi"
-    }
     override fun onBindViewHolder(holder: GithubRepositoriesViewHolder, position: Int) {
         getItem(position)?.let { gitHubRepository ->
             holder.bind(gitHubRepository)
